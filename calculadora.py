@@ -2,14 +2,14 @@ q1 = int(input("quantos numeros deseja calcular, min 2 max 4?"))
 if q1 == 2:
     n1 = float(input("digite o primeiro número?"))
     n2 = float(input("digite o segundo número?"))
-    op = str(input("qual operação: Soma(+), Subtração(-), Multiplicação(X), ou Divisão(/) ? "))
+    op = str(input("qual operação: Soma(+), Subtração(-), Multiplicação(*), ou Divisão(/) ? "))
     if op == '+':
        r = n1 + n2
        print(r)
     elif op == '-':
        r = n1 - n2
        print(r)
-    elif op == 'X':
+    elif op == '*':
        r = n1 * n2
        print(r)
     elif op == '/':
