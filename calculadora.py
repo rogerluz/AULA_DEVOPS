@@ -1,4 +1,4 @@
-q1 = int(input("quantos numeros deseja calcular, min 2 max 4?"))
+q1 = int(input("quantos numeros deseja calcular: min 2 max 4?"))
 if q1 == 2:
     n1 = float(input("digite o primeiro número?"))
     n2 = float(input("digite o segundo número?"))
