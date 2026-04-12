@@ -1,3 +1,5 @@
+import math
+
 q1 = int(input("quantos numeros deseja calcular: minimo 2 max 4?"))
 if q1 == 2:
     n1 = float(input("digite o primeiro número?"))
