@@ -4,10 +4,18 @@ op = ""
 numb1 = ""
 numb2 = ""
 final = 0
+evento = ""
+
+
+def handle_key(event):
+    global evento
+    evento = event.name
+    return evento
 
 
 while True:
-    tecla = keyboard.read_key()
+    keyboard.on_press(handle_key)
+    tecla = evento
     if tecla != "c":
         if tecla not in ['s', 'd', 'c'] and op == "":
             numb1 += tecla
