@@ -1,8 +1,10 @@
 import keyboard
+
 op = ""
 numb1 = ""
 numb2 = ""
 final = 0
+
 
 while True:
     tecla = keyboard.read_key()
@@ -18,21 +20,9 @@ while True:
     else:
         match op:
             case 's':
-                n1 = int(numb1)
-                n2 = int(numb2)
-                final = n1 + n2
+                final = int(numb1) + int(numb2)
                 break
             case 'd':
-                n1 = int(numb1)
-                n2 = int(numb2)
-                final = n1 - n2
+                final = int(numb1) - int(numb2)
                 break
 print(final)
-      
-        
-        
-  
-
-
-
-    
