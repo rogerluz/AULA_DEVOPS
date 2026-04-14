@@ -4,7 +4,7 @@ on:
   pull_request:
       branches:
       - teste
-
+      
 jobs:
   build-linux:
     runs-on: ubuntu-latest
