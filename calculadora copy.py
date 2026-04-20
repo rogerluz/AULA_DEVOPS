@@ -1,4 +1,8 @@
 import keyboard
+import sys
+
+
+sys.set_int_max_str_digits(200000)
 
 
 op = ""
@@ -10,7 +14,7 @@ evento = ""
 
 #
 
-# mais um comentário
+# mais um comentário testando o teste
 
 
 def handle_key(event):
@@ -32,11 +36,19 @@ while True:
             numb2 += tecla
             continue
     else:
+        n1 = int(numb1)
+        n2 = int(numb2)
         match op:
             case 's':
-                final = int(numb1) + int(numb2)
+                final = n1 + n2
+                tecla = ""
+                op = ""
                 break
             case 'd':
-                final = int(numb1) - int(numb2)
+                final = n1 - n2
+                tecla = ""
+                op = ""
                 break
+tecla = "o"
+op = ""
 print(final)

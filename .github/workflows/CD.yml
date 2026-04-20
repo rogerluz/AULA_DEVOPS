@@ -1,0 +1,20 @@
+name: CD Python Project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  CD:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: upload
+        uses: actions/upload-artifact@v7
+        with:
+          name: my-artifact
+          path: C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\AULA_DEVOPS
