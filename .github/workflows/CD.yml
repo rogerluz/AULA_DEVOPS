@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       build_path:
-        description: 'Path to the directory to zip'
+
         required: true
-        default: 'C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\AULA_DEVOPS'
+        default: 'C:\Users\roger\OneDrive\Documentos\ADS\GITHUB'
   push:
     branches:
       - main
@@ -25,7 +25,7 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           filename: 'release.zip'      # nome do arquivo zip
-          path: AULA_DEVOPS            # diretório a ser compactado (relativo ao repositório)
+          path: 'C:\Users\roger\OneDrive\Documentos\ADS\GITHUB'            # diretório a ser compactado (relativo ao repositório)
           type: zip
 
 
