@@ -15,7 +15,7 @@ on:
 jobs:
 
 
-  CriarDiretorio:
+  Upload:
     runs-on: windows-latest
     permissions:
       contents: write
@@ -48,7 +48,7 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
-  upload:
+  Download:
     needs: CriarDiretorio
     runs-on: windows-latest
     steps:
