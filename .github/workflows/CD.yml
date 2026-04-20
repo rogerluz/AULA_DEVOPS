@@ -6,7 +6,7 @@ on:
       build_path:
 
         required: true
-        default: 'C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\**'
+        default: 'AULA_DEVOPS'
   push:
     branches:
       - main
@@ -19,14 +19,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
-          filename: 'release.zip'      # nome do arquivo zip
-          path: 'C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\**'            # diretório a ser compactado (relativo ao repositório)
-          type: zip
+            filename: release.zip        # nome do arquivo zip
+            path: ${{ github.event.inputs.build_path }}   # usa o input do workflow
+            type: zip
 
 
   upload:
