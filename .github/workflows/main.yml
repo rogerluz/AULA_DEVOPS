@@ -1,9 +1,6 @@
 name: CI Python Project
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -26,15 +23,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
-
-      - name: Debug repo and pytest collection
-        run: |
-          echo "PWD: $(pwd)"
-          ls -la
-          ls -la tests || true
-          find . -type f -name "test_*.py" -o -name "*_test.py" -print || true
-          cat pytest.ini || true
-          pytest --collect-only -q || true
 
       - name: Run tests
         run:
