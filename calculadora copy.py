@@ -1,7 +1,6 @@
 import keyboard
 
 
-
 op = ""
 numb1 = ""
 numb2 = ""
