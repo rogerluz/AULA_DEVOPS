@@ -8,7 +8,7 @@ final = 0
 evento = ""
 
 
-# comentario espaço
+# comentario espaço com mais caracteres
 
 
 def handle_key(event):
