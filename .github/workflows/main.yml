@@ -27,5 +27,15 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
 
+      - name: Debug repo and pytest collection
+        run: |
+          echo "PWD: $(pwd)"
+          ls -la
+          ls -la tests || true
+          find . -type f -name "test_*.py" -o -name "*_test.py" -print || true
+          cat pytest.ini || true
+          pytest --collect-only -q || true
+
       - name: Run tests
-        run: pytest -s
+        run:
+          pytest -q -s
