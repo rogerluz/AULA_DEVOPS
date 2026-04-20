@@ -34,7 +34,7 @@ jobs:
       - name: Save release.zip
         uses: actions/upload-artifact@v4
         with:
-          name: release-zip
+          name: release-zip-${{ github.run_number }}
           path: release.zip
 
       - name: Commit release.zip
