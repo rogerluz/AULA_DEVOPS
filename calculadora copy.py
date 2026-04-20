@@ -6,7 +6,10 @@ numb1 = ""
 numb2 = ""
 final = 0
 evento = ""
-#comentario
+
+
+# comentario espaço
+
 
 def handle_key(event):
     global evento
