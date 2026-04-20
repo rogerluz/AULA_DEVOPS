@@ -6,19 +6,19 @@ on:
       - main
 
 jobs:
-  CD:
+  CriarDiretorio:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
           filename: 'release.zip'
-          path: AULA_DEVOPS
+          path: |
+
   upload:
+    needs: CriarDiretorio
     runs-on: ubuntu-latest
     steps:
       - name: Upload artifact
