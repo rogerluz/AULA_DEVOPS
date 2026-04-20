@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path: ${{ github.event.inputs.build_path }}
+          path: ${{ github.event.inputs.build_path || 'AULA_DEVOPS' }}
           if-no-files-found: error
 
       - name: Mensagem de sucesso
