@@ -5,20 +5,22 @@ on:
     branches:
       - main
 
+
 jobs:
+
   CriarDiretorio:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
-          INPUT_FILENAME: release.zip
-          INPUT_PATH: AULA_DEVOPS
-          INPUT_TYPE: zip
-          filename: 'release.zip'
-          path: |
+          filename: release.zip        # nome do arquivo zip
+          path: AULA_DEVOPS            # diretório a ser compactado (relativo ao repositório)
+          type: zip
 
   upload:
     needs: CriarDiretorio
