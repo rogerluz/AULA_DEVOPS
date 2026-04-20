@@ -19,3 +19,4 @@ jobs:
           name: my-artifact
           path: C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\AULA_DEVOPS
           if-no-files-found: error
+          echo: "upload com sucesso"
