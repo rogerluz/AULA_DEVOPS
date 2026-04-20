@@ -7,17 +7,25 @@ on:
 
 jobs:
   CD:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: 'release.zip'
+          path: AULA_DEVOPS
+  upload:
+    runs-on: ubuntu-latest
+    steps:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path: AULA_DEVOPS
+          path: AULA_DEVOPS/release.zip
           if-no-files-found: error
 
       - name: Mensagem de sucesso
