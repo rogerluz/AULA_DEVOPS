@@ -10,7 +10,7 @@ evento = ""
 
 #
 
-# mais um comentário
+# mais um comentário testando o teste
 
 
 def handle_key(event):
