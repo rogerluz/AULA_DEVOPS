@@ -17,6 +17,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: my-artifact
-          path: C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\AULA_DEVOPS
+          path: AULA_DEVOPS
           if-no-files-found: error
           echo: "upload com sucesso"
