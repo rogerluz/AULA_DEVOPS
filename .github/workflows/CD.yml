@@ -49,7 +49,7 @@ jobs:
 
 
   Download:
-    needs: CriarDiretorio
+    needs: Upload
     runs-on: windows-latest
     steps:
       - name: Download release.zip
