@@ -25,7 +25,7 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           filename: release.zip        # nome do arquivo zip
-          path: AULA_DEVOPS            # diretório a ser compactado (relativo ao repositório)
+          path: |            # diretório a ser compactado (relativo ao repositório)
           type: zip
 
       - name: Commit release.zip
