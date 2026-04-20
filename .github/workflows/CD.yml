@@ -24,7 +24,7 @@ jobs:
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
-          filename: release.zip        # nome do arquivo zip
+          filename: 'release.zip'      # nome do arquivo zip
           path: C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\AULA_DEVOPS            # diretório a ser compactado (relativo ao repositório)
           type: zip
 
