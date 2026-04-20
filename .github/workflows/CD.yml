@@ -54,8 +54,6 @@ jobs:
     steps:
       - name: Download release.zip
         uses: actions/download-artifact@v4
-        with:
-          name: release-${{ github.run_number }}-zip
 
       - name: Mensagem de sucesso
         run: echo "Upload e download executado com sucesso"
