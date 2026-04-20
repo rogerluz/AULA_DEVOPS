@@ -31,6 +31,12 @@ jobs:
             path: ${{ github.event.inputs.build_path }}   # usa o input do workflow
             type: zip
 
+      - name: Save release.zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-zip
+          path: release.zip
+
       - name: Commit release.zip
         run: |
             git config --global user.email "rogerfluz@live.com"
@@ -46,12 +52,10 @@ jobs:
     needs: CriarDiretorio
     runs-on: windows-latest
     steps:
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Download release.zip
+        uses: actions/download-artifact@v4
         with:
-          name: my-artifact
-          path: ${{ github.event.inputs.build_path || 'AULA_DEVOPS' }}
-          if-no-files-found: error
+          name: release-zip
 
       - name: Mensagem de sucesso
-        run: echo "Upload com sucesso"
+        run: echo "Upload e download executado com sucesso"
