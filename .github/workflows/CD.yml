@@ -20,7 +20,7 @@ jobs:
         with:
           filename: release.zip        # nome do arquivo zip
           path: AULA_DEVOPS            # diretório a ser compactado (relativo ao repositório)
-          type: zip
+          type: zip -r release.zip . -i AULA_DEVOPS
 
   upload:
     needs: CriarDiretorio
