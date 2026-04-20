@@ -13,10 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: upload
-        uses: actions/upload-artifact@v7
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path: 'C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\AULA_DEVOPS'
+          path: C:\Users\roger\OneDrive\Documentos\ADS\GITHUB\AULA_DEVOPS
           if-no-files-found: error
-          echo: "upload com sucesso"
+
+      - name: Mensagem de sucesso
+        run: echo "Upload com sucesso"
