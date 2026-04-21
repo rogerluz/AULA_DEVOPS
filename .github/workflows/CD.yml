@@ -34,14 +34,14 @@ jobs:
       - name: Save release.zip
         uses: actions/upload-artifact@v4
         with:
-          name: release-${{ github.run_number }}-zip
-          path: release-${{ github.run_number }}-zip
+          name: release-zip-${{ github.run_number }}
+          path: release-zip-${{ github.run_number }}
 
       - name: Commit release.zip
         run: |
             git config --global user.email "rogerfluz@live.com"
             git config --global user.name "rogerluz"
-            git add release-${{ github.run_number }}-zip
+            git add release-zip-${{ github.run_number }}
             git commit -m "adicionando o zip ao main"
             git push
         env:
@@ -54,6 +54,8 @@ jobs:
     steps:
       - name: Download release.zip
         uses: actions/download-artifact@v4
+        with:
+          name: release-zip-${{ github.run_number }}
 
       - name: Mensagem de sucesso
         run: echo "Upload e download executado com sucesso"
