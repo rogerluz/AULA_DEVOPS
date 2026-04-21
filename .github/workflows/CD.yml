@@ -55,7 +55,7 @@ jobs:
       - name: Download release.zip
         uses: actions/download-artifact@v4
         with:
-          name: release-zip-${{ github.run_number }}
+          name: AULA_DEVOPS/release-zip-${{ github.run_number }}
 
       - name: Mensagem de sucesso
         run: echo "Upload e download executado com sucesso"
