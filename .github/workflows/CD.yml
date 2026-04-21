@@ -27,7 +27,7 @@ jobs:
       - name: cria o zip
         uses: thedoctor0/zip-release@master
         with:
-            filename: release-${{ github.run_number }}-zip        # nome do arquivo zip
+            filename: release-zip        # nome do arquivo zip
             path: ${{ github.event.inputs.build_path }}   # usa o input do workflow
             type: zip
 
@@ -35,13 +35,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: release-zip-${{ github.run_number }}
-          path: release-zip-${{ github.run_number }}
+          path: release-zip
 
       - name: Commit release.zip
         run: |
             git config --global user.email "rogerfluz@live.com"
             git config --global user.name "rogerluz"
-            git add release-zip-${{ github.run_number }}
+            git add release-zip-**
             git commit -m "adicionando o zip ao main"
             git push
         env:
@@ -55,7 +55,7 @@ jobs:
       - name: Download release.zip
         uses: actions/download-artifact@v4
         with:
-          name: AULA_DEVOPS/release-zip-${{ github.run_number }}
+          name: release-zip-${{ github.run_number }}
 
       - name: Mensagem de sucesso
         run: echo "Upload e download executado com sucesso"
