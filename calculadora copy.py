@@ -8,7 +8,7 @@ final = 0
 evento = ""
 
 
-#
+# adicionado um comentário novo
 
 # mais um comentário testando o teste
 
